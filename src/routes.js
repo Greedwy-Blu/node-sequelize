@@ -4,11 +4,24 @@ const UserController = require('./controller/UserController');
 
 const routes = express.Router();
 
-routes.post('/users', UserController.store);
 routes.get('/users', UserController.index);
-routes.get('/cadastrar-usuario', (req, res) =>{
-    res.render('Página de posts');
-});
+
+routes.get('/', async (req, res) =>{
+    res.render('index');
+  });
+
+
+  routes.post('/', async (req, res) =>{
+    res.render('index');
+  });
+
+  routes.get('/form', async (req, res, next) =>{
+    res.render('form');
+    next();
+  },function (next) {
+    routes.post('/form', UserController.store);
+ 
+  });
 
 
 module.exports = routes;
