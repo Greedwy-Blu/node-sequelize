@@ -1,0 +1,23 @@
+<%- include('../partials/head') %>
+<body>
+    <div class="wrapper5">
+        <form action="/edit/update" method="POST">
+            <h1>Editar</h1>
+            <br>
+            <input type="hidden" name="id" value="<%=user.id%>">
+            <label for="nome">Nome</label>
+            <br>
+            <input type="text" value="<%=user.name%>" name="name">
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" value="<%=user.email%>" name="email">
+            <br>
+            <button type="submit">Atualizar</button>
+            <br>
+
+        </form>
+
+    </div>
+</body>
+</html>

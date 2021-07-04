@@ -1,0 +1,18 @@
+<%- include('../partials/head') %>
+<body>
+    <div class="wrapper4">
+    <div id="user">
+            <i class="fa fa-user-circle"></i>
+            <p style="font-size:20px"><%= user.name%></p>
+            <hr>
+            <h3>Email</h3>
+            <p><%= user.email%></p>
+            <div class="btn-user">
+                <button><a href="/user/edit/<%=user.id%>">Editar</a></button>
+                <button><a href="/logout">Sair</a></button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
